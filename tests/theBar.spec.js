@@ -1,12 +1,14 @@
-const {
-  expect
-} = require('chai')
+const { expect } = require('chai')
+
+const { describe, it } = require('mocha')
 
 const {
-  describe,
-  it
-} = require('mocha')
-
-const {
+  test
   // import here
-} = require('..')
+} = require('../firstTest.js')
+
+describe('tests', () => {
+  it('should prove test environment is set up', () => {
+    expect(test()).to.equal('working')
+  })
+})
